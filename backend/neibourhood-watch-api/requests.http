@@ -1,0 +1,61 @@
+### Get all users
+GET http://localhost:8080/api/users
+Accept: application/json
+
+### Get user by ID
+GET http://localhost:8080/api/users/1
+Accept: application/json
+
+### Create a new user
+POST http://localhost:8080/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username": "john_doe",
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john@example.com",
+  "phoneNumber": "+26771234567",
+  "isActive": true
+}
+
+### Update an existing user
+PUT http://localhost:8080/api/users/2
+Content-Type: application/json
+Accept: application/json
+
+{
+  "firstName": "David",
+  "lastName": "Blake",
+  "phoneNumber": "+26777546298",
+  "isActive": false
+}
+
+### Delete a user
+DELETE http://localhost:8080/api/users/1
+Accept: application/json
+
+
+### Testing signup
+POST http://localhost:8080/api/users/signup
+Content-Type: application/json
+
+{
+  "username": "musakabantu",
+  "firstName": "Musakabantu",
+  "lastName": "Muyobo",
+  "email": "musakabantu@gmail.com.com",
+  "phoneNumber": "1234567890",
+  "password": "mypassword"
+}
+
+
+### Testing Login
+POST http://localhost:8080/api/users/login
+Content-Type: application/json
+
+{
+  "username": "musakabantu",
+  "password": "mypassword"
+}
